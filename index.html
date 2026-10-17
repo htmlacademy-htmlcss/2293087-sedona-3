@@ -10,7 +10,7 @@
 
   <body>
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <a class="logotype" href="index.html"><img class="page-header-logo" src="images/logo/logo-sedona.svg"
             width="138" height="70" alt="Логотип городка Седона в Аризоне"></a>
         <nav class="navigation">
@@ -45,13 +45,13 @@
         </nav>
         <a class="navigation-button button" href="#">Хочу сюда!</a>
       </header>
-      <main class="main-index">
-        <section class="hero">
+      <main class="main-index" data-test="main">
+        <section class="hero" data-test="hero">
           <h1 class="visually-hidden">Городок Седона в Аризоне</h1>
           <img class="main-logo" src="images/logo/logo-welcome.svg" width="458" height="352"
             alt="Welcome to the gargeous Sedona, because the Grand Canyon sucks!">
         </section>
-        <section class="advantages-photo">
+        <section class="advantages-photo" data-test="advantages">
           <div class="main">
             <h2 class="main-title">Седона — небольшой городок в аризоне, заслуживающий большего!</h2>
             <p class="main-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -86,7 +86,7 @@
             </li>
           </ul>
         </section>
-        <section class="services">
+        <section class="services" data-test="service">
           <div class="main-serv">
             <h2 class="main-title serv">Приезжайте в седону отдохнуть<br> в комфорте и уюте!</h2>
             <p class="main-description serv">Опытный персонал и качественное обслуживание!</p>
@@ -106,7 +106,7 @@
             </li>
           </ul>
         </section>
-        <section class="booking">
+        <section class="booking" data-test="search">
           <h2 class="main-title">Заинтересовались?</h2>
           <p class="booking-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
             гостиниц
@@ -186,8 +186,8 @@
         </section>
       </footer>
     </div>
-    <div class="modal-container modal-container-close">
-      <div class="modal modal-search">
+    <div class="modal-container">
+      <div class="modal modal-search" data-test="modal">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
