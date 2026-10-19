@@ -101,6 +101,7 @@ body {
   min-width: 88px;
   padding-right: 19px;
   display: flex;
+  align-items: center;
 }
 
 .navigation-link {
@@ -431,6 +432,7 @@ body {
   background-image: url("../images/blur/background-subscribe.jpg");
   background-color: rgb(55 89 111);
   background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   padding: 94px 258px 103px;
 
@@ -568,7 +570,7 @@ body {
 
 .inner-header {
   background-image: url("../images/blur/back-filter.jpg");
-  background-color: #82b3d3;
+  background-color: #5e6770;
   background-size: cover;
   padding: 36px 70px 63px 70px;
 }
@@ -607,7 +609,7 @@ body {
 
 .breadcrumbs-link-main::after {
   position: absolute;
-  background-image: url("../images/icon/right.arrow.svg");
+  background-image: url("../images/icon/right-arrow.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 19px;
@@ -832,13 +834,14 @@ body {
   margin-top: 5px;
 }
 
-input[type="number"] {
+.modal-input,
+.input {
   -moz-appearance: textfield;
 }
 
 .input::-webkit-inner-spin-button,
 .input::-webkit-outer-spin-button {
- -webkit-appearance: none;
+  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -891,11 +894,12 @@ input[type="number"] {
 
 .options-icon {
   display: flex;
-  width: 161px;
-  height: 48px;
+  min-width: 161px;
+  min-height: 48px;
   justify-content: space-between;
   margin-left: auto;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .icon-catalog {
@@ -915,8 +919,8 @@ input[type="number"] {
   background-repeat: no-repeat;
   background-position: center;
   content: "";
-  width: 48px;
-  height: 44px;
+  width: 46px;
+  height: 45px;
   position: absolute;
 }
 
@@ -1070,7 +1074,7 @@ input[type="number"] {
 
 .pagination-link {
   display: flex;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-color: #82b3d3;
   border-radius: 4px;
@@ -1176,12 +1180,12 @@ input[type="number"] {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url("../images/icon/checkbox.empty.svg");
+  background-image: url("../images/icon/checkbox-empty.svg");
   background-repeat: no-repeat;
 }
 
 .radio-input::after {
-  background-image: url("../images/icon/ellipse.empty.svg");
+  background-image: url("../images/icon/ellipse-empty.svg");
 }
 
 .checkbox-input:checked::after {
