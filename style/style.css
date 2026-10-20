@@ -101,6 +101,7 @@ body {
   min-width: 88px;
   padding-right: 19px;
   display: flex;
+  align-items: center;
 }
 
 .navigation-link {
@@ -133,7 +134,8 @@ body {
   background-color: #756157;
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 160px;
+  min-width: 160px;
+  flex-shrink: 0;
 }
 
 .option-search {
@@ -431,6 +433,7 @@ body {
   background-image: url("../images/blur/background-subscribe.jpg");
   background-color: rgb(55 89 111);
   background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   padding: 94px 258px 103px;
 
@@ -535,6 +538,7 @@ body {
 .social-list {
   display: flex;
   max-width: 200px;
+  min-width: 150px;
 }
 
 .social-link {
@@ -562,13 +566,13 @@ body {
   font-size: 40px;
   line-height: 40px;
   color: #000000;
-  padding-left: 2px;
+  padding-right: 5px;
 
 }
 
 .inner-header {
   background-image: url("../images/blur/back-filter.jpg");
-  background-color: #82b3d3;
+  background-color: #5e6770;
   background-size: cover;
   padding: 36px 70px 63px 70px;
 }
@@ -607,7 +611,7 @@ body {
 
 .breadcrumbs-link-main::after {
   position: absolute;
-  background-image: url("../images/icon/right.arrow.svg");
+  background-image: url("../images/icon/right-arrow.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 19px;
@@ -653,11 +657,10 @@ body {
 .catalog-filter-group {
   font-family: "PT Sans", sans-serif;
   color: #ffffff;
-  display: inline-block;
   width: 150px;
   padding: 0;
   border: none;
-  margin-right: 67px;
+  margin-right: 71px;
   margin-left: 0;
   margin-top: 1px;
 }
@@ -674,18 +677,19 @@ body {
 
 .actions {
   width: 191px;
-  height: 104px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  padding-top: 57px;
 }
 
 .catalog-products {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   padding-top: 39px;
+}
+
+.forms {
+  display: flex;
 }
 
 .search {
@@ -712,6 +716,7 @@ body {
   height: 36px;
   border-radius: 4px;
   border-width: 0;
+  margin-bottom: 33px;
 }
 
 .button-reset {
@@ -805,7 +810,7 @@ body {
 }
 
 .toggle-max {
-  left: 74%;
+  left: 73%;
 }
 
 .price-input {
@@ -832,13 +837,14 @@ body {
   margin-top: 5px;
 }
 
-input[type="number"] {
+.modal-input,
+.input {
   -moz-appearance: textfield;
 }
 
 .input::-webkit-inner-spin-button,
 .input::-webkit-outer-spin-button {
- -webkit-appearance: none;
+  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -891,11 +897,12 @@ input[type="number"] {
 
 .options-icon {
   display: flex;
-  width: 161px;
-  height: 48px;
-  justify-content: space-between;
+  min-width: 161px;
+  max-width: 200px;
   margin-left: auto;
   position: relative;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .icon-catalog {
@@ -915,8 +922,8 @@ input[type="number"] {
   background-repeat: no-repeat;
   background-position: center;
   content: "";
-  width: 48px;
-  height: 44px;
+  width: 46px;
+  height: 45px;
   position: absolute;
 }
 
@@ -1070,7 +1077,7 @@ input[type="number"] {
 
 .pagination-link {
   display: flex;
-  width: 60px;
+  min-width: 52px;
   height: 60px;
   background-color: #82b3d3;
   border-radius: 4px;
@@ -1080,6 +1087,7 @@ input[type="number"] {
   color: #ffffff;
   justify-content: center;
   align-items: center;
+  padding: 0 4px;
 }
 
 .pagination-current {
@@ -1114,16 +1122,15 @@ input[type="number"] {
 
 .select-wrapper {
   position: relative;
-  display: inline-block;
   width: 292px;
-  margin-left: 158px;
+  margin-left: auto;
 }
 
 .select-wrapper::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: -25px;
   transform: translateY(-50%);
   pointer-events: none;
   width: 12px;
@@ -1133,7 +1140,8 @@ input[type="number"] {
 
 .select-wrapper select {
   width: 100%;
-  padding: 11px 55px 12px 18px;
+  padding: 12px 55px 12px 18px;
+  margin-left: 45px;
   font-size: 18px;
   line-height: 23px;
   border: 1px solid #e5e5e5;
@@ -1176,12 +1184,12 @@ input[type="number"] {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url("../images/icon/checkbox.empty.svg");
+  background-image: url("../images/icon/checkbox-empty.svg");
   background-repeat: no-repeat;
 }
 
 .radio-input::after {
-  background-image: url("../images/icon/ellipse.empty.svg");
+  background-image: url("../images/icon/ellipse-empty.svg");
 }
 
 .checkbox-input:checked::after {
